@@ -1,0 +1,2 @@
+class ContributedPhoto < ApplicationRecord
+end
