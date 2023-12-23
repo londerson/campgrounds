@@ -1,4 +1,6 @@
 class CampgroundsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @campgrounds = Campground.all
   end
