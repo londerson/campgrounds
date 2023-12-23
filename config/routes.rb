@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root "campgrounds#index"
-  resources :campgrounds, only: [:index, :show]
+  resources :campgrounds, only: [:index, :show] do
+    collection do
+      get 'recently_viewed'
+    end
+  end
 end
