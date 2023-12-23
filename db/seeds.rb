@@ -127,7 +127,7 @@ campgrounds_data =
 ]
 
 campgrounds_data.each do |camp|
-  campground = Campground.create!(name: camp[:name], overview: camp[:overview], city: camp[:city], cover_photo_url: camp[:cover_photo_url])
+  campground = Campground.create!(name: camp[:name], overview: camp[:overview], city: camp[:city], state: camp[:state], cover_photo_url: camp[:cover_photo_url])
 
   camp[:contributed_photos].each do |url|
     contributed_photo = ContributedPhoto.create!(url: url, campground_id: campground.id)
