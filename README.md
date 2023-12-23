@@ -73,13 +73,8 @@ The `UsersController` under the `Api::V1` namespace is responsible for handling 
 
 ## Example Request
 
-    ```bash
-    curl -X GET "http://[hostname]/api/v1/users/123/recently_viewed"
-
-
-## Successful Response Example for recently_viewed
-
-```json
+```bash
+curl -X GET "http://localhost:3000/api/v1/users/1/recently_viewed"
 
 {
   "compgrounds": [
@@ -99,10 +94,4 @@ The `UsersController` under the `Api::V1` namespace is responsible for handling 
     }
   ]
 }
-
-
-### Request
-
-```bash
-curl -X GET "http://localhost:3000/api/v1/users/1/recently_viewed"
 
